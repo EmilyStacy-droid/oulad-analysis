@@ -1,4 +1,4 @@
-# Predicting Student Dropout Risk Based on Background and Course Engagement 
+# Predicting Student Dropout Risk Using Demographics and Online Activity 
 ## Datasource
 The data source is from https://analyse.kmi.open.ac.uk/#open-dataset
 
