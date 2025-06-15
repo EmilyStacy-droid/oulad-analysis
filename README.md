@@ -3,13 +3,13 @@
 The data source is from https://analyse.kmi.open.ac.uk/#open-dataset
 
 ## Required CSV files
-After downloading the dataset, create a ==data== folder in repo and copy the following 3 CSV files:
+After downloading the dataset, create a **data** folder in repo and copy the following 3 CSV files:
 1. StudentInfo
 2. StudentRegistration
 3. StudentVle
 
 ## Generate and save models
-Create a ==models== folder Go to notebooks to run the data-analysis. Three models should be generated and saved in the folder.
+Create a **models** folder Go to the existing **notebooks** folder to run the data-analysis. Three models should be generated and saved in the folder.
 
 
 
