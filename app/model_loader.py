@@ -14,7 +14,6 @@ expected_features = ['num_of_prev_attempts', 'studied_credits', 'sum_click', 'da
 
 def load_model_and_predict(form_data):
     # Convert form input to float or int as needed
-
     input_dict = {}
     # Set default value in case the form data is missing
     input_dict['highest_education_Lower Than A Level'] = 1.0 if form_data.get('highest_education') == 'Lower Than A Level' else 0.0
