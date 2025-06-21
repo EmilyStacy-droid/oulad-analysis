@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  oulad-app:
+    build: .
+    container_name: oulad-container
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app/app
+      - ./models:/app/models
+    environment:
+      - PYTHONUNBUFFERED=1
+
