@@ -11,4 +11,26 @@ services:
       - ./models:/app/models
     environment:
       - PYTHONUNBUFFERED=1
-
+    networks:
+      - oulad-net
+  selenium:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "4444:4444"
+    shm_size: 2gb
+    networks:
+      - oulad-net
+  test:
+    build: .
+    container_name: flask_tests
+    environment:
+      - SELENIUM_REMOTE_URL=http://selenium:4444/wd/hub
+    command: python -m pytest -v
+    depends_on:
+      - oulad-app
+      - selenium
+    networks:
+      - oulad-net
+networks:
+  oulad-net:
+    driver: bridge
