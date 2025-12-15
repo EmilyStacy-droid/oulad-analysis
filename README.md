@@ -28,3 +28,7 @@ http://127.0.0.1:5000
 
 ## References
 1. J. Kuzilek, M. Hlosta, and Z. Zdrahal. 2017. Open University Learning Analytics Dataset. Scientific Data 4, 170171. DOI: https://doi.org/10.1038/sdata.2017.171. CC‑BY 4.0. Available: https://analyse.kmi.open.ac.uk/open_dataset
+
+## Run tests
+1. Start Docker
+2. Run python -m pytest -v
