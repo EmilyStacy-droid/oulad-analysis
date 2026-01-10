@@ -31,4 +31,7 @@ http://127.0.0.1:5000
 
 ## Run tests and Apps
 1. Run 
+```
 docker-compose up 
+```
+2. If tests passed we will see logs like ```app/tests/test_selenium.py::test_prediction_flow PASSED```
