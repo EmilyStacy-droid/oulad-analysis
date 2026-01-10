@@ -28,3 +28,10 @@ http://127.0.0.1:5000
 
 ## References
 1. J. Kuzilek, M. Hlosta, and Z. Zdrahal. 2017. Open University Learning Analytics Dataset. Scientific Data 4, 170171. DOI: https://doi.org/10.1038/sdata.2017.171. CC‑BY 4.0. Available: https://analyse.kmi.open.ac.uk/open_dataset
+
+## Run tests and Apps
+1. Run 
+```
+docker-compose up 
+```
+2. If tests passed we will see logs like `app/tests/test_selenium.py::test_prediction_flow PASSED`

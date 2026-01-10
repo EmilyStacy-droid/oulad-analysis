@@ -16,7 +16,9 @@ def load_model_and_predict(form_data):
     # Convert form input to float or int as needed
     input_dict = {}
     # Set default value in case the form data is missing
-    input_dict['highest_education_Lower Than A Level'] = 1.0 if form_data.get('highest_education') == 'Lower Than A Level' else 0.0
+    selected_education = form_data.get("highest_education")
+    for edu_level in ['A Level or Equivalent', 'HE Qualification', 'No Formal quals', 'Post Graduate Qualification']:
+        input_dict[f'highest_education_{edu_level}'] = 1.0 if selected_education == edu_level else 0.0
     input_dict['gender_M'] = 1.0 if form_data.get('gender') == 'M' else 0.0
     input_dict['gender_F'] = 1.0 if form_data.get('gender') == 'F' else 0.0
     input_dict['studied_credits'] = float(form_data.get('studied_credits', 0))

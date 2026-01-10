@@ -13,22 +13,22 @@
 </head>
 <body class="container py-5">
   <h2 class="mb-4">Student Dropout Prediction</h2>
-  <form method="post">
+  <form id="predictForm" method="post">
     <div class="mb-3">
       <label for="sum_click" class="form-label">Total Clicks</label>
-      <input type="number" step="1" class="form-control" name="sum_click" required>
+      <input id="sum_click" type="number" step="1" class="form-control" name="sum_click" required>
     </div>
     <div class="mb-3">
       <label for="date_registration" class="form-label">Days Since Registration</label>
-      <input type="number" step="1" class="form-control" name="date_registration" required>
+      <input id="date_registration" type="number" step="1" class="form-control" name="date_registration" required>
     </div>
     <div class="mb-3">
       <label for="studied_credits" class="form-label">Studied Credits</label>
-      <input type="number" step="1" class="form-control" name="studied_credits" required>
+      <input id="studied_credits" type="number" step="1" class="form-control" name="studied_credits" required>
     </div>
     <div class="mb-3">
       <label for="num_of_prev_attempts" class="form-label">Previous Attempts</label>
-      <input type="number" class="form-control" name="num_of_prev_attempts" required>
+      <input id="num_of_prev_attempts" type="number" class="form-control" name="num_of_prev_attempts" required>
     </div>
     <!-- Add categorical inputs like gender, education -->
     <div class="mb-3">
@@ -40,8 +40,11 @@
     </div>
     <div class="mb-3">
       <label class="form-label">Education Level</label>
-      <select class="form-select" name="highest_education_Lower Than A Level">
-        <option value="1">Lower Than A Level</option>
+      <select class="form-select" name="highest_education">
+        <option value="Lower Than A Level">Lower Than A Level</option>
+        <option value="A Level or Equivalent">A Level or Equivalent</option>
+        <option value="HE Qualification">HE Qualification</option>
+        <option value="Post Graduate Qualification">Post Graduate Qualification</option>
         <option value="0">Other</option>
       </select>
     </div>
@@ -62,7 +65,7 @@
           </select>
     </div>
 
-    <button type="submit" class="btn btn-primary">Predict</button>
+    <button id="submit" type="submit" class="btn btn-primary">Predict</button>
     <button type="button"  class="btn btn-secondary" onclick="resetForm()">Reset</button>
   </form>
 
